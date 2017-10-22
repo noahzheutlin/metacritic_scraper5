@@ -4,10 +4,10 @@ import scraperwiki
 import lxml.html
 import re
 
-types = ['games/release-date/all/pc',]
+types = ['games/score/metascore/all/all',]
 
 for type in types:
-    url = "http://www.metacritic.com/browse/%s/date?view=detailed" % type
+    url = "http://www.metacritic.com/browse/%s" % type
 
     html = scraperwiki.scrape(url)
     root = lxml.html.fromstring(html)
